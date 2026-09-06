@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 1.13.0"
+  required_version = "~> 1.13"
 
   required_providers {
     aws = {
@@ -14,8 +14,9 @@ provider "aws" {
 
   default_tags {
     tags = {
-      environment = "bootstrap"
-      managedBy   = "terraform"
+      Environment = var.environment
+      ManagedBy   = "Terraform"
+      Repository  = "terraform-aws-lab"
     }
   }
 }
