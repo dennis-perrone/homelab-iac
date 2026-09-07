@@ -14,9 +14,9 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Environment = var.environment
-      ManagedBy   = "Terraform"
-      Repository  = "terraform-aws-lab"
+      environment = var.environment
+      managedBy   = "terraform"
+      stack       = "network"
     }
   }
 }
